@@ -205,6 +205,7 @@ OSError: [Errno -9997] Invalid sample rate
 ```
 > .asoundrc 파일 수정
 >> 변경 되어 있음
+
 >> 원래 파일로 복구
 
 ### Hotword 생성
