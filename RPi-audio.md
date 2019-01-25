@@ -1,17 +1,20 @@
-라즈베리파이에서 USB 마이크, 스피커 설정하기
-=========================================
-https://diy-project.tistory.com/88
+# [라즈베리파이에서 USB 마이크, 스피커 설정하기](https://diy-project.tistory.com/88)
 
-> 사용 가능한 마이크 검색<br>
+### 사용 가능한 마이크 검색
+```bash
 $ arecord -l<br>
 결과 card 1, device 0
+```
 
-> 스피커 검색<br>
+### 스피커 검색
+```bash
 $ aplay -l
+```
 
-> ALSA 설정<br>
+### ALSA 설정
+```bash
 $ vi .asoundrc
-```    
+   
 pcm.!default {
     type asym
     capture.pcm "mic"
@@ -52,7 +55,7 @@ $ alsamixer
 
 Snowboy를 이용한 음성인식 전용 마이크 만들기(1) 
 ============================================
-2018. 7. 28.
+- 2018. 7. 28.
 
 https://m.blog.naver.com/cosmosjs/221328328264
 
