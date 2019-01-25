@@ -103,9 +103,9 @@ https://heropy.blog/2017/09/30/markdown/
   + 더하기(plus sign)
 
 
-각각 <em>, <strong>, <del> 태그로 변환됩니다.
+```각각 <em>, <strong>, <del> 태그로 변환됩니다.```
 
-밑줄을 입력하고 싶다면 <u></u> 태그를 사용하세요.
+```밑줄을 입력하고 싶다면 <u></u> 태그를 사용하세요.```
 
 이텔릭체는 *별표(asterisks)* 혹은 _언더바(underscore)_를 사용하세요.
 두껍게는 **별표(asterisks)** 혹은 __언더바(underscore)__를 사용하세요.
@@ -116,7 +116,7 @@ https://heropy.blog/2017/09/30/markdown/
 
 목록(List)
 
-<ol>, <ul> 목록 태그로 변환됩니다.
+```<ol>, <ul> 목록 태그로 변환됩니다.```
 
 1. 순서가 필요한 목록
 1. 순서가 필요한 목록
