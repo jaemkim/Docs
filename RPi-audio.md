@@ -29,7 +29,7 @@ pcm.mic {
 pcm.speaker {
     type plug
     slave {
-        pcm "hw:1,0"
+        pcm "hw:0,0"
     }
 }
 ```
@@ -50,6 +50,7 @@ record: main:788: audio open error: 그런 파일이나 디렉터리가 없습�
 ```
 > http://snowdeer.github.io/raspberry/2017/08/12/raspberry-aplay-and-arecord/
 ```bash
+근본적인 원인은 .asoundrc 파일 설정 오류
 $ arecord -t raw -c 1 -D plughw:1,0 -f S16_LE -d 5 -r 16000 test.pcm
 $ aplay -t raw -c 1 -f S16_LE -r 16000 test.pcm
 ```
@@ -204,8 +205,7 @@ Traceback (most recent call last)::
 OSError: [Errno -9997] Invalid sample rate
 ```
 > .asoundrc 파일 수정
->> 변경 되어 있음
-
+>> 변경 되어 있음<br>
 >> 원래 파일로 복구
 
 ### Hotword 생성
@@ -218,5 +218,26 @@ OSError: [Errno -9997] Invalid sample rate
 
 > **오류**
 >> Chrome에서는 안됨
+
 > **Fireefox 설치**
 >> google 계정 로긴
+
+### 다음 단계
+- 핫워드가 인지되면 UDP를 이용 패킷을 구글 어시스턴트가 설치된 라즈베리파이3로 전송
+- 앞서 작성한 글에서 NodeMCU가 해줬던 역활을 이번 R1에서 스노우보이가 대신함
+- 두개의 파이를 사용하기 때문에 오디오 리소스 문제가 해결 되었지만 파이를 두개나 동원
+```
+def detectedCallback():
+    snowboydecoder.play_audio_file()
+    print('Detection')
+
+    #Create a UDP socket
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    R3_address = (('192.168.0.7', 4210))
+    msge = "Hey google"
+    #UDP - send packet
+    sock.connect((R3_address))
+    print('Send packet')
+    sock.send(msge.encode(encoding='utf_8', errors='strict'))
+    sock.close()
+```
