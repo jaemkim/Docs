@@ -3,10 +3,10 @@
 
 
 1. [Google Action Console](https://console.actions.google.com/u/0/)에 접속
-- 새로운 프로젝트 생성 : 이름을 넣고 생성
-- 그러면 아직 이 창을 닫지 말고 [Google API Console](https://console.developers.google.com/)에 접속
-+ 결제
-+ API 및 서비스 검색에서 Google assistant를 검색 : 사용설정을 눌러 활성화
+  - 새로운 프로젝트 생성 : 이름을 넣고 생성
+  - 그러면 아직 이 창을 닫지 말고 [Google API Console](https://console.developers.google.com/)에 접속
+    + 결제
+    + API 및 서비스 검색에서 Google assistant를 검색 : 사용설정을 눌러 활성화
 - 왼쪽 메뉴의 사용자 인증 정보 클릭후 OAuth 동의 화면 클릭, 이메일 주소, 사용자에게 표시되는 제품의 이름 (영어)를 작성한뒤 아래의 저장 버튼을 누른다.
 - 다음 https://myaccount.google.com/activitycontrols에 접속 하여 Web & App Activity, Device Information, Voice & Audio Activity를 활성화
 - 이제 다시 Google Action Console로 돌아와서 왼쪽 메뉴바의 Device registration을 클릭
@@ -29,7 +29,7 @@ $ google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-pro
                        --save --headless --client-secrets /home/pi/client_secret_23481444425-1gs9la9dli1kh1tb31lokmqd9be9ejfs.apps.googleusercontent.com.json
 ```
 - Please visit this URL to authorize this application: https://... 허용 하면
-- __Enter the authorization code:__에 들어갈 코드 생성
+- <u>Enter the authorization code:</u>에 들어갈 코드 생성
 
 4. 실행
 - Model ID : jmketri-97ef6-jmketri-9nrytf
