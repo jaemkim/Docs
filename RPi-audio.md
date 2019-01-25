@@ -34,24 +34,35 @@ pcm.speaker {
 }
 ```
 
-> 스피커 테스트<br>
+### 스피커 테스트
+```bash
 $ speaker-test -t wav
+```
 
-> 녹음<br>
+### 녹음
+```bash
 $ arecord --format=S16_LE --duration=5 --rate=16000 --file-type=raw out.raw
+```
 
-    arecord: main:788: audio open error: 그런 파일이나 디렉터리가 없습니다
-    http://snowdeer.github.io/raspberry/2017/08/12/raspberry-aplay-and-arecord/
+> record: main:788: audio open error: 그런 파일이나 디렉터리가 없습니다
+> http://snowdeer.github.io/raspberry/2017/08/12/raspberry-aplay-and-arecord/
+>
+>> $ arecord -t raw -c 1 -D plughw:1,0 -f S16_LE -d 5 -r 16000 test.pcm
+>> $ aplay -t raw -c 1 -f S16_LE -r 16000 test.pcm
+```bash
+$ arecord -t raw -c 1 -D plughw:1,0 -f S16_LE -d 5 -r 16000 test.pcm
+$ aplay -t raw -c 1 -f S16_LE -r 16000 test.pcm
+```
 
-    $ arecord -t raw -c 1 -D plughw:1,0 -f S16_LE -d 5 -r 16000 test.pcm
-    $ aplay -t raw -c 1 -f S16_LE -r 16000 test.pcm
-
-
-> 실행<br>
+### 실행
+```bash
 $ aplay --format=S16_LE --rate=16000 out.raw
+```
 
-> 소리조절<br>
+### 소리조절
+```bash
 $ alsamixer
+```
 
 Snowboy를 이용한 음성인식 전용 마이크 만들기(1) 
 ============================================
