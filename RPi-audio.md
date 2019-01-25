@@ -204,10 +204,9 @@ Traceback (most recent call last)::
 OSError: [Errno -9997] Invalid sample rate
 ```
 > .asoundrc 파일 수정
-```
-변경 되어 있음
-원래 파일로 복구
-```
+>> 변경 되어 있음
+>> 원래 파일로 복구
+
 ### Hotword 생성
 - https://snowboy.kitt.ai
 - 로그인
@@ -217,7 +216,6 @@ OSError: [Errno -9997] Invalid sample rate
 - 라즈베리파이 스노우보이 models 폴더에 복사 후 실행
 
 > **오류**
-```
-Chrome에서는 안됨 - **Fireefox 설치**
-google 계정 로긴
-```
+>> Chrome에서는 안됨
+> **Fireefox 설치**
+>> google 계정 로긴
