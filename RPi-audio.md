@@ -30,14 +30,14 @@ pcm.speaker {
 ```
 
 
-> 스피커 테스트
+> 스피커 테스트<br>
 $ speaker-test -t wav
 
-> 녹음
+> 녹음<br>
 $ arecord --format=S16_LE --duration=5 --rate=16000 --file-type=raw out.raw
 
-> 실행
+> 실행<br>
 $ aplay --format=S16_LE --rate=16000 out.raw
 
-> 소리조절
+> 소리조절<br>
 $ alsamixer
