@@ -4,7 +4,7 @@ https://diy-project.tistory.com/88
 
 > 사용 가능한 마이크 검색<br>
 $ arecord -l
->> 결과 card 1, device 0<br>
+    결과 card 1, device 0
 
 > 스피커 검색<br>
 $ aplay -l
