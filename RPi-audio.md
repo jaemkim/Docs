@@ -44,9 +44,11 @@ $ speaker-test -t wav
 $ arecord --format=S16_LE --duration=5 --rate=16000 --file-type=raw out.raw
 ```
 
-> record: main:788: audio open error: 그런 파일이나 디렉터리가 없습니다
+> 오류 
+```
+record: main:788: audio open error: 그런 파일이나 디렉터리가 없습니다
+```
 > http://snowdeer.github.io/raspberry/2017/08/12/raspberry-aplay-and-arecord/
->
 ```bash
 $ arecord -t raw -c 1 -D plughw:1,0 -f S16_LE -d 5 -r 16000 test.pcm
 $ aplay -t raw -c 1 -f S16_LE -r 16000 test.pcm
@@ -86,16 +88,19 @@ sudo apt-get install python-pyaudio python3-pyaudio sox
 pip install pyaudio
 ```
 
+> 오류
 ```
-    arm-linux-gnueabihf-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fdebug-prefix-map=/build/python3.5-6waWnr/python3.5-3.5.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/home/pi/env/include -I/usr/include/python3.5m -c src/_portaudiomodule.c -o build/temp.linux-armv7l-3.5/src/_portaudiomodule.o
-    src/_portaudiomodule.c:29:23: fatal error: portaudio.h: 그런 파일이나 디렉터리가 없습니다
-        #include "portaudio.h"
-                           ^
-    compilation terminated.
-    error: command 'arm-linux-gnueabihf-gcc' failed with exit status 1
+arm-linux-gnueabihf-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fdebug-prefix-map=/build/python3.5-6waWnr/python3.5-3.5.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/home/pi/env/include -I/usr/include/python3.5m -c src/_portaudiomodule.c -o build/temp.linux-armv7l-3.5/src/_portaudiomodule.o
+src/_portaudiomodule.c:29:23: fatal error: portaudio.h: 그런 파일이나 디렉터리가 없습니다
+    #include "portaudio.h"
+                        ^
+compilation terminated.
+error: command 'arm-linux-gnueabihf-gcc' failed with exit status 1
+```
 
-    https://stackoverflow.com/questions/5921947/pyaudio-installation-error-command-gcc-failed-with-exit-status-1
-```
+> https://stackoverflow.com/questions/5921947/pyaudio-installation-error-command-gcc-failed-with-exit-status-1
+
 ```bash
 sudo apt-get install portaudio19-dev
 ```
+
