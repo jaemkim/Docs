@@ -37,6 +37,8 @@ import webrepl_setup
 import webrepl
 webrepl.start(password='PASS')
 ```
+- Browser
+    + http://micropython.org/webrepl/
 
 ### Creating a MicroPython Module
 - boot.py

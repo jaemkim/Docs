@@ -66,3 +66,6 @@ ugfx.string(10, 120, 'IBM Plex Mono Bold 24', 'IBMPlexMono_Bold24', ugfx.BLACK)
 ugfx.string(10, 160, 'IBM Plex Mono Light 24', 'IBMPlexMono_Light24', ugfx.BLACK)
 ```
 
+### [SHA2017-badge/Firmware](https://github.com/SHA2017-badge/Firmware)
+- ESP32 firmware for the SHA2017 badge
+- 
