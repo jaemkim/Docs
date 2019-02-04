@@ -90,14 +90,23 @@ mv token.json ./profiles/default.json
 
 ### 5. Google assistant module config 에디팅
 
-Open the Magic Mirror configuration file with TextEditor and modify it with the contents of github
+1. Open the Magic Mirror configuration file with TextEditor and modify it with the contents of github
+
+https://github.com/makepluscode/rpi-tutorial-advanced/tree/master/006-raspbian-magicmirror-google-assistant-latest
+
 https://github.com/makepluscode/rpi-tips/blob/master/003-magicmirror-assistant-how-to-change-lang/config.js
 
-https://raw.githubusercontent.com/makepluscode/rpi-tutorial-advanced/master/003-raspbian-magicmirror-google-assistant/config.js.sample.kr
+https://github.com/makepluscode/rpi-tutorial-advanced/tree/master/003-raspbian-magicmirror-google-assistant
+
 
 
 ### 6. 실행
 ```sh
 cd ~/MagicMirror
 npm start
+```
+
+### 7. 디버깅
+```sh
+npm start dev
 ```
